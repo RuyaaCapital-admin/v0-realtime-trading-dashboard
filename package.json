@@ -63,10 +63,10 @@
     "sonner": "latest",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
-    "trading-signals": "latest",
+    "trading-signals": "5.0.0",
     "use-sync-external-store": "latest",
     "vaul": "^0.9.9",
-    "zod": "3.25.67",
+    "zod": "3.25.76",
     "zustand": "latest"
   },
   "devDependencies": {
