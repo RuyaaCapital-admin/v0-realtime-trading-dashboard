@@ -12,7 +12,7 @@ export class IndicatorManager {
     this.rsi = new RSI(14)
     this.ema20 = new EMA(20)
     this.ema50 = new EMA(50)
-    this.macd = new MACD({ short: 12, long: 26, signal: 9 })
+    this.macd = new MACD.MACD({ short: 12, long: 26, signal: 9 })
     this.atr = new ATR(14)
   }
 
@@ -22,7 +22,7 @@ export class IndicatorManager {
     this.rsi = new RSI(14)
     this.ema20 = new EMA(20)
     this.ema50 = new EMA(50)
-    this.macd = new MACD({ short: 12, long: 26, signal: 9 })
+    this.macd = new MACD.MACD({ short: 12, long: 26, signal: 9 })
     this.atr = new ATR(14)
 
     // Feed historical data
