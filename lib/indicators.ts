@@ -1,29 +1,29 @@
-import { RSI, EMA, MACD, ATR } from "trading-signals"
+import * as TradingSignals from "trading-signals"
 import type { Bar, Indicators } from "./chart-context"
 
 export class IndicatorManager {
-  private rsi: RSI
-  private ema20: EMA
-  private ema50: EMA
-  private macd: MACD
-  private atr: ATR
+  private rsi: any
+  private ema20: any
+  private ema50: any
+  private macd: any
+  private atr: any
 
   constructor() {
-    this.rsi = new RSI(14)
-    this.ema20 = new EMA(20)
-    this.ema50 = new EMA(50)
-    this.macd = new MACD({ short: 12, long: 26, signal: 9 })
-    this.atr = new ATR(14)
+    this.rsi = new TradingSignals.RSI(14)
+    this.ema20 = new TradingSignals.EMA(20)
+    this.ema50 = new TradingSignals.EMA(50)
+    this.macd = new TradingSignals.MACD({ short: 12, long: 26, signal: 9 })
+    this.atr = new TradingSignals.ATR(14)
   }
 
   // Initialize with historical data
   seedWithBars(bars: Bar[]): Indicators {
     // Reset indicators
-    this.rsi = new RSI(14)
-    this.ema20 = new EMA(20)
-    this.ema50 = new EMA(50)
-    this.macd = new MACD({ short: 12, long: 26, signal: 9 })
-    this.atr = new ATR(14)
+    this.rsi = new TradingSignals.RSI(14)
+    this.ema20 = new TradingSignals.EMA(20)
+    this.ema50 = new TradingSignals.EMA(50)
+    this.macd = new TradingSignals.MACD({ short: 12, long: 26, signal: 9 })
+    this.atr = new TradingSignals.ATR(14)
 
     // Feed historical data
     for (const bar of bars) {
